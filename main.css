@@ -191,8 +191,22 @@ figure.effect-portfolio:hover p {
   font-size: 1.5em;
   background: #6FACCB;
   color: #fff;
+  padding: 5%;
 }
 
+#about-content {
+  margin-top: 5%;
+}
+
+#about-me img {
+  border-radius: 100%;
+  width: 8em;
+  height: auto;
+}
+
+#about-me button {
+  margin-left: 35%;
+}
 
 /* contact styles */
 
