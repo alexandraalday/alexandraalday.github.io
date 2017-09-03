@@ -25,15 +25,9 @@ section {
 .separator {
   max-width: 300px;
   margin: 0 auto 15px auto;
-}
-
-.separator-light {
-  border-top: solid 3px #fff;
-  color: #fff;
-}
-
-.separator-dark {
-  border-top: solid 3px;
+  height: 2px;
+  background: linear-gradient(to right,#12daff,#D721C9);
+  border-color: transparent;
 }
 
 .special {
@@ -49,11 +43,18 @@ section {
 
 .navbar {
   margin: 0;
+  background-color: transparent;
+  background: transparent;
+  border-color: transparent;
 }
 
 #mobile-nav {
   font-size: 1.4em;
   display: none;
+}
+
+#bootstrap-override a {
+  color: #12daff;
 }
 
 
@@ -65,7 +66,6 @@ section {
   position: relative;
 }
 
- /* code to apply filter to background from stackoverflow.com */
 #heading:before {
   content: ' ';
   width: 100%;
@@ -75,20 +75,78 @@ section {
   top: 0px;
   left: 0px;
   background: url("https://s24.postimg.org/gqq62l5wl/cannonbeachblue.jpg") center center fixed no-repeat;
+  background-color: rgba(127, 76, 178, 0.6);
+  background-blend-mode: multiply;
   background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
-  -webkit-filter: brightness(50%);
-  -moz-filter: brightness(50%);
-  -o-filter: brightness(50%);
-  -ms-filter: brightness(50%);
-  filter: brightness(50%);
+  -webkit-filter: brightness(80%);
+  -moz-filter: brightness(80%);
+  -o-filter: brightness(80%);
+  -ms-filter: brightness(80%);
+  filter: brightness(80%);
 }
 
+
+
 .intro-text {
-  color: #fff;
   padding: 100px 0;
+}
+
+.arrow {
+  opacity: 0;
+  position: absolute;
+    left: 50%;
+    top: 90%;
+  transform-origin: 90% 90%;
+  transform: translate3d(-90%, -90%, 0);
+}
+
+.arrow-1 {
+    animation: arrow-movement 4s ease-in-out infinite;
+}
+.arrow-2 {
+    animation: arrow-movement 4s 1.25s ease-in-out infinite;
+}
+
+.arrow-3 {
+    animation: arrow-movement 4s 2.75s ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+  background: #12daff;
+  content: '';
+  display: block;
+  height: 3px; 
+  position: absolute;
+    top: 0;
+    left: 0;
+  width: 30px;
+}
+
+.arrow:before {
+  transform: rotate(45deg) translateX(-23%);
+  transform-origin: top left;
+}
+
+.arrow:after {
+  transform: rotate(-45deg) translateX(23%);
+  transform-origin: top right;
+}
+
+@keyframes arrow-movement {
+  0%   { 
+    opacity: 0;
+    top: 85%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% { 
+    opacity: 0;
+  }
 }
 
 
@@ -189,7 +247,7 @@ figure.effect-portfolio:hover p {
 /* about-me styles */
 #about-me {
   font-size: 1.5em;
-  background: #6FACCB;
+  background: rgba(61, 61, 142, 0.86);
   color: #fff;
   padding: 5%;
 }
