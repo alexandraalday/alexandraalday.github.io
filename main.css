@@ -152,8 +152,10 @@ section {
 
 /* portfolio styles */
 
+#portfolio  h1 {
+  color: rgba(61, 61, 142, 0.86);
+}
 
-/* code for caption hover effects from Codrops and K. Anthony;  slightly modified*/
 figure {
   position: relative;
   overflow: hidden;
@@ -200,7 +202,7 @@ figure p {
 }
 
 figure.effect-portfolio {
-  background: #333;
+  background: rgba(61, 61, 142, 0.86);
 }
 
 figure.effect-portfolio img,
@@ -247,7 +249,13 @@ figure.effect-portfolio:hover p {
 /* about-me styles */
 #about-me {
   font-size: 1.5em;
-  background: rgba(61, 61, 142, 0.86);
+  background: url("https://i.imgur.com/bUDnXZg.jpg") center center fixed no-repeat;
+  background-color: rgba(127, 76, 178, 0.8);
+  background-blend-mode: multiply;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
   color: #fff;
   padding: 5%;
 }
@@ -263,10 +271,19 @@ figure.effect-portfolio:hover p {
 }
 
 #about-me button {
+  margin-top: 10%;
   margin-left: 35%;
+  background-color: rgba(61, 61, 142, 0.86);
+  border-color: #D721C9;
+  color: #12daff;
 }
 
 /* contact styles */
+
+#contact {
+  background-color: rgba(144, 126, 235, 0.36);
+  color: rgba(61, 61, 142, 0.86);
+}
 
 .social {
   list-style: none;
@@ -285,11 +302,31 @@ figure.effect-portfolio:hover p {
   height: 50px;
 }
 
-#free-code-camp, #github, #linked-in, #twitter {
+.social li a:hover {
+  color: #D721C9;
+}
+
+#github, #linked-in, #twitter {
+  background: rgba(144, 126, 235, 0.36);
   border-radius: 50%;
-  border: solid 2px #B1B2BD;
+  border: solid 2px rgba(61, 61, 142, 0.86);
   font-size: 1.5em;
   padding: 10px;
+}
+
+#github:hover, #linked-in:hover, #twitter:hover {
+  background: rgba(61, 61, 142, 0.86);
+  border: solid 2px #D721C9;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+#bottom-line {
+  max-width: 100%;
+  margin: 0 auto;
+  height: 4px;
+  background: linear-gradient(to right,#12daff,#D721C9);
+  border-color: transparent;
 }
 
 
