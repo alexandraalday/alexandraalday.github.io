@@ -306,7 +306,7 @@ figure.effect-portfolio:hover p {
   color: #D721C9;
 }
 
-#github, #linked-in, #twitter {
+#github, #linked-in, #twitter, #email {
   background: rgba(144, 126, 235, 0.36);
   border-radius: 50%;
   border: solid 2px rgba(61, 61, 142, 0.86);
@@ -314,7 +314,7 @@ figure.effect-portfolio:hover p {
   padding: 10px;
 }
 
-#github:hover, #linked-in:hover, #twitter:hover {
+#github:hover, #linked-in:hover, #twitter:hover, #email:hover {
   background: rgba(61, 61, 142, 0.86);
   border: solid 2px #D721C9;
   font-size: 1.5em;
