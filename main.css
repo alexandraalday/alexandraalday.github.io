@@ -192,10 +192,6 @@ section {
   color: rgba(61, 61, 142, 0.86);
 }
 
-#projects {
-  opacity: 0;
-}
-
 figure {
   position: relative;
   overflow: hidden;
