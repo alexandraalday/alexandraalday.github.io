@@ -1,8 +1,36 @@
-
-
 $(window).on("load",function(){
 
-$(function() {
+    // ABOUT ME STUFF
+    let scrollMagicController = new ScrollMagic.Controller();
+    let aboutmeTween = TweenMax.staggerFromTo('#about-me .item', 0.5,
+        {
+            y: 50,
+            x: -50,
+            opacity: 0
+        },
+        {
+            y: 0,
+            x: 0,
+            opacity: 1
+        },
+        0.2
+    );
+    let aboutmeScene = new ScrollMagic.Scene({
+        triggerElement: '#about-me .item',
+        duration: 500,
+        offset: -200
+    })
+    .setTween(aboutmeTween)
+    .addTo(scrollMagicController);
+
+
+
+
+
+
+
+	// PORTFOLIO STUFF
+	$(function() {
 
 
 	$('.slider-portfolio-pic').slick({
@@ -21,7 +49,7 @@ $(function() {
         speed: 1000,
 		asNavFor: '.slider-portfolio-pic',       
         slide: 'div',
-		autoplay:true,
+		autoplay:false,
 		arrows: false
 	});
 
@@ -35,7 +63,7 @@ $(function() {
         centerMode: true,
         focusOnSelect: true,
         slide: 'div',
-		autoplay:true,
+		autoplay:false,
       responsive: [
 	    {
 	      breakpoint: 768,
