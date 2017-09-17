@@ -23,7 +23,7 @@
   <meta name="twitter:title" content="Alexandra Alday">
   <meta name="twitter:description" content="Web Design &amp; Development">
   <meta name="twitter:image:src" content="https://i.imgur.com/K34Ebq1.png">
-  <!-- FACE MACHINA -->
+  <!-- FACEBOX  -->
   <meta property="og:site_name" content="Alexandra Alday">
   <meta property="og:url" content="https://alexandraalday.com">
   <meta property="og:type" content="website">
@@ -38,6 +38,8 @@
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic|Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
   <link rel="stylesheet" type="text/css" href="./main.css">
 </head>
 
@@ -98,13 +100,14 @@
 
 <header>
   <div class="jumbotron text-center" id="heading">
-    <div class="container intro-text">
-      <h1>Hello!</h1>
+    <div class="container intro-text" id="typed-strings">
+      <h1><strong>Hello!</strong></h1>
       <hr class="separator">
       <h2>
         I'm Alexandra. Nice to meet you.
       </h2>
     </div>
+
     <div class="arrow arrow-1"></div>
     <div class="arrow arrow-2"></div>
     <div class="arrow arrow-3"></div>
@@ -112,95 +115,124 @@
 </header>
 
 
-
 <!-- begin portfolio section -->
-  <section id="portfolio" name="portfolio">
+  <section id="portfolio" name="portfolio" class="portfolio-section" data-type="background" data-speed="5">
   <div class="container">
     <div class="row text-center">
       <h1>Portfolio</h1>
       <hr class="separator">
     </div>
-    <!-- end section title row -->
-    <div class="row" id="portfolio-trigger">
-    <div class="col-md-4 portfolio-item">
-        <figure class="effect-portfolio">
-          <img class="img-responsive" src="https://i.imgur.com/oQWffhO.png" alt="Lasers vs. Bubbles">
-          <figcaption>
-            <h2>
-            <span>Lasers vs. Bubbles</span></h2>
-            <p>Pew! Pew! It's a quick little canvas game, based on Asteroids. 
-            </p>
-            <a href="https://alexandraalday.github.io/lasers-vs-bubbles/" target='_blank'></a>
-          </figcaption>
-        </figure>
+      <div class="row">
+        <div class="col-sm-offset-1 col-sm-7 col-xs-12">          
+          <div class="slider slider-portfolio-pic">
+            <div class="slide-item">
+                <img src="https://i.imgur.com/bEfzVvI.png">
+            </div> 
+            <div class="slide-item">
+                <img src="https://i.imgur.com/oQWffhO.png">
+            </div>              
+              <div class="slide-item">      
+                <img src="http://i.imgur.com/JX34jZN.png">
+            </div>
+              <div class="slide-item">      
+                <img src="http://i.imgur.com/SCHpu3g.png">
+            </div>
+              <div class="slide-item">      
+                <img src="http://i.imgur.com/T8HtbGH.jpg">
+            </div>
+              <div class="slide-item">      
+                <img src="http://i.imgur.com/gkRkJyy.jpg">
+            </div>
+              <div class="slide-item">      
+                <img src="http://i.imgur.com/Ve0LW0R.png">
+            </div>                  
+          </div><!-- slider-for -->         
+        </div>  
+        <div class="col-sm-4 col-xs-12" id="portfolio-text-content">
+          <div class="border"></div>
+          <div class="slider slider-portfolio-content">
+            <div>      
+                <p><strong>Modus</strong></p>
+                <p>Find songs to fit your mood. Enter the artist's name and title of a song. Modus will serve up 100 songs, consuming the Last.fm API, to make you feel the same.</p>
+                <p><em>Technologies used: HTML, CSS, Ruby, Rails, Express, AngularJS</em></p>
+                <a href="https://github.com/alexandraalday/modus_app_frontend" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+                <a href="https://modus-app.herokuapp.com/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
+            </div> 
+            <div>
+                <p><strong>Lasers vs. Bubbles</strong></p>
+                <p>Pew! Pew! It's a quick little canvas game, based on Asteroids.</p>
+                <p><em>Technologies used: HTML, CSS, JavaScript, jQuery, P5</em></P>
+                <a href="https://github.com/alexandraalday/lasers-vs-bubbles" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+                <a href="https://alexandraalday.github.io/lasers-vs-bubbles/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
+            </div>              
+              <div>      
+                <p><strong>Girl Gang</strong></p>
+                <p>A MEAN stack app to collect and share media that celebrates and empowers all things femme. </p>
+                <p><em>Technologies used: HTML5, CSS3, Bootstrap, JavaScript, jQuery</em></p>
+                <a href="https://github.com/alexandraalday/girl-gang" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+                <a href="http://girl-gang.herokuapp.com/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
+            </div>
+              <div>      
+                <p><strong>Simon Universe</strong></p>
+                <p>A game application based on the 80's classic, Simon, and inspired by the cartoon Steven Universe.</p>
+                <p><em>Technologies used: HTML5, CSS3, Bootstrap, JavaScript, jQuery</em></p>
+                <a href="https://github.com/alexandraalday/SimonUniverse" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+                <a href="https://alexandraalday.github.io/SimonUniverse/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
+            </div>
+              <div>      
+                <p><strong>Pixel Weather</strong></p>
+                <p>A weather app that uses geolocation to display the current weather.</p>
+                <p><em>Technologies used: HTML5, CSS3, Bootstrap, JavaScript, jQuery, APIs</em></p>
+                <a href="https://github.com/alexandraalday/pixel-weather" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+                <a href="https://alexandraalday.github.io/pixel-weather/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
+            </div>
+              <div>
+                <p><strong>Hangman</strong></p> 
+                <p>A quick hangman game.</p>           
+                <p>A design made for SuperMegaAwsome Agency using Photoshop</p>
+                <a href="https://github.com/alexandraalday/hangman" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+                <a href="https://alexandraalday.github.io/hangman/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>            
+            </div>
+              <div>      
+                <p><strong>Ancient Clapbacks</strong></p>
+                <p>A random generator of sassy, ancient quotes. Quotes can then be tweeted!</p>
+                <p><em>Technologies used: HTML5, CSS3, Bootstrap, JavaScript, jQuery</em></p>
+                <a href="https://github.com/alexandraalday/ancient-clapbacks" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+                <a href="https://alexandraalday.github.io/ancient-clapbacks/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
+            </div>         
+          </div><!-- slider-for -->
+          <div class="border"></div>        
+        </div>        
+        <div class="col-sm-offset-1 col-sm-10 hidden-xs">                             
+          <div class="slider slider-portfolio-nav">
+            <div class="slide-item">
+                <img src="https://i.imgur.com/bEfzVvI.png">
+            </div> 
+            <div class="slide-item">
+                <img src="https://i.imgur.com/oQWffhO.png">
+            </div>
+              <div class="slide-item">      
+                <img src="http://i.imgur.com/JX34jZN.png">
+            </div>
+              <div class="slide-item">      
+                <img src="http://i.imgur.com/SCHpu3g.png">
+            </div>
+              <div class="slide-item">      
+                <img src="http://i.imgur.com/T8HtbGH.jpg">
+            </div>
+              <div class="slide-item">      
+                <img src="http://i.imgur.com/gkRkJyy.jpg">
+            </div>
+              <div class="slide-item">      
+                <img src="http://i.imgur.com/Ve0LW0R.png">
+            </div>           
+          </div>
+        </div>     
+        <div class="col-sm-1"></div>
       </div>
-      <div class="col-md-4 portfolio-item">
-        <figure class="effect-portfolio">
-          <img class="img-responsive" src="http://i.imgur.com/JX34jZN.png" alt="Girl Gang">
-          <figcaption>
-            <h2>
-            <span>Girl Gang</span></h2>
-            <p>A MEAN stack app to collect and share media that celebrates and empowers all things femme.  
-            </p>
-            <a href="http://girl-gang.herokuapp.com/" target='_blank'></a>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-4 portfolio-item">
-        <figure class="effect-portfolio">
-          <img class="img-responsive" src="http://i.imgur.com/SCHpu3g.png" alt="Simon Universe">
-          <figcaption>
-            <h2>
-            <span>Simon Universe</span></h2>
-            <p>A front end only game application based on the 80's classic, Simon, and inspired by the cartoon Steven Universe.  
-            </p>
-            <a href="https://alexandraalday.github.io/SimonUniverse/" target='_blank'></a>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-4 portfolio-item">
-        <figure class="effect-portfolio">
-          <img class="img-responsive" src="http://i.imgur.com/T8HtbGH.jpg" alt="Pixel Weather">
-          <figcaption>
-            <h2>
-            <span>Pixel Weather</span></h2>
-            <p>A front end only weather app that uses geolocation to display the current weather. 
-            </p>
-            <a href="https://alexandraalday.github.io/pixel-weather/" target='_blank'></a>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="col-md-4 portfolio-item">
-        <figure class="effect-portfolio">
-          <img class="img-responsive" src="http://i.imgur.com/gkRkJyy.jpg" alt="Hangman">
-          <figcaption>
-            <h2>
-            <span>Hangman</span></h2>
-            <p>A front end only hangman game. 
-            </p>
-            <a href="https://alexandraalday.github.io/hangman/" target='_blank'></a>
-          </figcaption>
-        </figure>
-      </div>
-        <div class="col-md-4 portfolio-item">
-          <figure class="effect-portfolio">
-            <img class="img-responsive" src="http://i.imgur.com/Ve0LW0R.png" alt="Random Quote Generator">
-            <figcaption>
-              <h2>
-              <span>Ancient Clapbacks</span></h2>
-              <p>A front end only random generator of sassy, ancient quotes. Quotes can then be tweeted! 
-              </p>
-              <a href="https://alexandraalday.github.io/ancient-clapbacks/" target='_blank'></a>
-            </figcaption>
-          </figure>
-       </div>
-      <!-- end column -->
     </div>
-    <!-- end row -->
-  </div>
-  <!-- end container -->
-</section>
-<!-- end  portfolio section -->
+  </section> <!-- end portfolio section -->
+
 
 
 
@@ -262,8 +294,11 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
   <script data-cfasync="false" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
-  <script data-cfasync="false" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.min.js"></script>
-  <script data-cfasync="false" src="./js/magic-spells.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+<!-- for production   <script data-cfasync="false" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.min.js"></script>
+ -->  <script data-cfasync="false" src="./js/magic-spells.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
   <script type="text/javascript" src="./main.js"></script>
 </body>
 </html>
