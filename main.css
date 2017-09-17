@@ -1,14 +1,3 @@
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-  font-family: 'feathericons';
-  src:url('../fonts/feathericons/feathericons.eot?-8is7zf');
-  src:url('../fonts/feathericons/feathericons.eot?#iefix-8is7zf') format('embedded-opentype'),
-    url('../fonts/feathericons/feathericons.woff?-8is7zf') format('woff'),
-    url('../fonts/feathericons/feathericons.ttf?-8is7zf') format('truetype'),
-    url('../fonts/feathericons/feathericons.svg?-8is7zf#feathericons') format('svg');
-}
-
 html,
 body {
   height: 100%;
@@ -75,6 +64,7 @@ section {
   background: transparent;
   min-height: 100%;
   position: relative;
+  margin-bottom: 0px;
 }
 
 #heading:before {
@@ -216,7 +206,7 @@ section {
 /* portfolio styles */
 
 #portfolio  h1 {
-  color: rgba(61, 61, 142, 0.86);
+  color: #ffffff;
 }
 
 #portfolio i {
@@ -234,58 +224,73 @@ section {
   }
 .slick-prev:before,
 .slick-next:before {
-        color: #12daff !important;
+        color: #12daff;
 }
 .slide-item img{
   height: 300px;
   padding-bottom: 30px;
 }
-.slick-dots li button:before{
+.slick-dots li button:before {
   color: #12daff !important;
   font-size: 10px;
   margin-top: 10px;
 }
-.slick-arrows{
-  background-color: #12daff !important; 
+
+.slick-arrows {
+  background-color: #12daff;
+}
+
+.slick-prev {
+  left: -35px;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 25px;
+  line-height: 0;
 }
 
 /*portfolio*/
 .slider-portfolio-pic{
-  height: 250px !important;
+  height: 250px;
   margin: 5px auto;
     width:100%;
 }
+
 .slider-portfolio-content{
   height: 120px;
   margin: 10px 10px auto;
 }
+
 #portfolio-text-content{
   margin-top: 0;
+  color: #ffffff;
 }
+
 .slider-portfolio-pic img{
   width: 100%;
   height: 300px;
 }
+
 .slider-portfolio-nav, .slider-portfolio-nav img{
   height: 150px ;
   width: 100%;
   background-size: cover;
 }
+
 .slider-for img{
  margin: 0 auto;
 }
 
-  /* === portfolio section layout === */
-  .portfolio-section{
-    background-color: #ffffff;
-    margin: 0 auto; 
-      width: 100%; 
-      max-width: 1920px; 
-      position: relative; 
-  }
-  .portfolio-section h2{
-    margin-bottom:5px;
-  }
+.portfolio-section{
+  background-color: #242526;
+  margin: 0 auto; 
+    width: 100%; 
+    max-width: 1920px; 
+    position: relative; 
+}
+.portfolio-section h2{
+  margin-bottom:5px;
+}
 
 
 /* about-me styles */
@@ -323,8 +328,8 @@ section {
 /* contact styles */
 
 #contact {
-  background-color: rgba(144, 126, 235, 0.36);
-  color: rgba(61, 61, 142, 0.86);
+  background-color: #181919;
+  color: #ffffff;
 }
 
 .social {
