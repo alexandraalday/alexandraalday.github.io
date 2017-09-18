@@ -95,6 +95,7 @@ section {
   min-height: 100%;
   position: relative;
   margin-bottom: 0px;
+  color: #ffffff;
 }
 
 #heading:before {
@@ -343,13 +344,23 @@ section {
   height: auto;
 }
 
-#about-me button {
+#resume {
   margin-top: 10%;
   margin-left: 35%;
-  background-color: rgba(61, 61, 142, 0.86);
+  background-color: rgba(61, 61, 142, 0.4);
   border-color: #D721C9;
+  outline: 0;
   color: #12daff;
+  transition: 300ms;
 }
+
+#resume:hover {
+  background-color: rgba(61, 61, 142, 1);
+  color: #ffffff;
+}
+
+
+
 
 /* contact styles */
 
