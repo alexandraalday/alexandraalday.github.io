@@ -1,6 +1,9 @@
 $(window).on("load",function(){
 
-    // ABOUT ME STUFF
+    ////////////////////
+    // ABOUT ME STUFF //
+    ////////////////////
+
     let scrollMagicController = new ScrollMagic.Controller();
     let aboutmeTween = TweenMax.staggerFromTo('#about-me .item', 0.5,
         {
@@ -23,8 +26,10 @@ $(window).on("load",function(){
     .setTween(aboutmeTween)
     .addTo(scrollMagicController);
 
+    /////////////////////
+    // PORTFOLIO STUFF //
+    /////////////////////
 
-    // PORTFOLIO STUFF
     let portfolioTween = TweenMax.fromTo('#portfolio h1, #portfolio hr', 0.5,
         {
             y: -100
@@ -57,10 +62,10 @@ $(window).on("load",function(){
     .addTo(scrollMagicController);
 
 
+    //////////////////////
+    // PORTFOLIO SLIDER //
+    //////////////////////
 
-
-
-	// PORTFOLIO SLIDER
 	$(function() {
 
 
@@ -116,7 +121,10 @@ $(window).on("load",function(){
 	    }]
 	});    
   
-	//typed.js 
+	//////////////////
+    // TYPED TEXT   //
+    //////////////////
+    
 	$(function() {
 	  $(".typedtext").typed({
 	    strings: [" Developer", " Designer", " Creative"],

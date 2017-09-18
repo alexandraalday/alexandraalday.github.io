@@ -35,7 +35,9 @@ section {
 }
 
 
-/* navigation styles*/
+/*********************
+  navigation styles
+**********************/
 
 #navigation {
   padding: 0;
@@ -88,7 +90,9 @@ section {
   transform: translateY(0px);
   }
 
-/* intro styles */
+/*********************
+  heading styles
+**********************/
 
 #heading {
   background: transparent;
@@ -185,6 +189,7 @@ section {
 .arrow-1 {
     animation: arrow-movement 4s ease-in-out infinite;
 }
+
 .arrow-2 {
     animation: arrow-movement 4s 1.25s ease-in-out infinite;
 }
@@ -229,7 +234,9 @@ section {
 }
 
 
-/* portfolio styles */
+/*********************
+  portfolio styles
+**********************/
 
 #portfolio  h1 {
   color: #12daff;
@@ -239,23 +246,25 @@ section {
   font-size: 20px;
 }
 
-/*style for the slick slider*/
-/*general*/
 .slider {
-        width: auto;
-        margin: 40px auto;
-    }
+  width: auto;
+  margin: 40px auto;
+}
+
 .slick-slide {
-      margin: 0px 20px;
-  }
+  margin: 0px 20px;
+}
+
 .slick-prev:before,
 .slick-next:before {
-        color: #12daff;
+  color: #12daff;
 }
+
 .slide-item img{
   height: 300px;
   padding-bottom: 30px;
 }
+
 .slick-dots li button:before {
   color: #12daff !important;
   font-size: 10px;
@@ -275,11 +284,10 @@ section {
   line-height: 0;
 }
 
-/*portfolio*/
 .slider-portfolio-pic{
   height: 250px;
   margin: 5px auto;
-    width:100%;
+  width:100%;
 }
 
 .slider-portfolio-content{
@@ -310,17 +318,21 @@ section {
 .portfolio-section{
   background-color: #242526;
   margin: 0 auto; 
-    width: 100%; 
-    max-width: 1920px; 
-    position: relative; 
-    padding: 150px 0;
+  width: 100%; 
+  max-width: 1920px; 
+  position: relative; 
+  padding: 150px 0;
 }
+
 .portfolio-section h2{
   margin-bottom:5px;
 }
 
 
-/* about-me styles */
+/*********************
+  about me styles
+**********************/
+
 #about-me {
   font-size: 1.5em;
   background: url("https://i.imgur.com/bUDnXZg.jpg") center center fixed no-repeat;
@@ -360,9 +372,9 @@ section {
 }
 
 
-
-
-/* contact styles */
+/*********************
+  contact styles
+**********************/
 
 #contact {
   background-color: #181919;
@@ -426,7 +438,9 @@ section {
 }
 
 
-/****** Media Queries *****/
+/*********************
+  media queries
+**********************/
 
 @media only screen and (max-width: 950px) {
   figure.effect-portfolio p {
@@ -438,11 +452,10 @@ section {
 }
 
 @media only screen and (max-width: 768px) {
-  /*Once 767 width reached, hide normal nav and display icon nav*/
   #navigation {
     display: none;
   }
-  /*Using floats on header and right classes help them stay in the right place on screen resize*/
+
   .navbar-header {
     display: inline-block;
     float: left;
@@ -457,23 +470,6 @@ section {
   #mobile-nav ul li {
     display: inline-block;
     padding: 0;
-  }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
-  /* Hide hover effects for mobile */
-  figure.effect-portfolio:hover img {
-    -webkit-transform: none;
-    transform: none;
-  }
-  figure.effect-portfolio:hover h2 {
-    -webkit-transform: none;
-    transform: none;
-  }
-  figure.effect-portfolio:hover p {
-    opacity: 0;
-    -webkit-transform: none;
-    transform: none;
   }
 }
 
