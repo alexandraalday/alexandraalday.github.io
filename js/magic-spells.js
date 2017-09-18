@@ -72,7 +72,7 @@ $(window).on("load",function(){
 	$('.slider-portfolio-pic').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        speed: 1000,
+        speed: 2000,
         arrows: false,
         fade: true,
         asNavFor: '.slider-portfolio-nav'
@@ -82,10 +82,10 @@ $(window).on("load",function(){
 	$('.slider-portfolio-content').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        speed: 1000,
+        speed: 2000,
 		asNavFor: '.slider-portfolio-pic',       
         slide: 'div',
-		autoplay:false,
+		autoplay:true,
 		arrows: false
 	});
 
@@ -93,13 +93,13 @@ $(window).on("load",function(){
 	$('.slider-portfolio-nav').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        speed: 1000,
+        speed: 2000,
         asNavFor: '.slider-portfolio-content,.slider-portfolio-pic',
         dots: true,
         centerMode: true,
         focusOnSelect: true,
         slide: 'div',
-		autoplay:false,
+		autoplay:true,
       responsive: [
 	    {
 	      breakpoint: 768,
@@ -163,10 +163,10 @@ console.log("                             | (   / \\\\,// \\   )\\ \\ ");
 console.log("                             | |  /  /|'|\\  \\  | \\ \\ ");
 console.log("                             | | /  / | | \\  \\ | |\\ \\___ ");
 console.log("                             ) :'-_/--|_|--\\_-`: ( `-\\ ");
-console.log("                            / /  /    / \\    \\   \\ \\ ");
-console.log("                           / /  /    /   \\    \\   \\ \\ ");
-console.log("                      /\\_/ /   /    /     \\    \\   \\ \\_/\\ ");
-console.log("                      \\___'   /    /       \\   \\    `___/ ");
+console.log("                            / /  /    / \\    \\  \\ \\ ");
+console.log("                           / /  /    /   \\    \\  \\ \\ ");
+console.log("                      /\\_/ /   /    /     \\    \\  \\ \\_/\\ ");
+console.log("                      \\___'   /    /       \\   \\   `___/ ");
 console.log("                              /   /         \\   \\ ");
 console.log("                             /   /           \\   \\ ");
 console.log("                            /   /             \\   \\ ");

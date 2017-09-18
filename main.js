@@ -1,8 +1,10 @@
 $(() => {
 
     $(document).ready(function(){
+        let rightmeow = $('#heading').offset().top  + $('#heading').height()
+        console.log(rightmeow);
         $(document).scroll(function () {
-            if ($(this).scrollTop() <= 815) {
+            if ( $(document).scrollTop() <= rightmeow ) {
                 $('.navbar').css('background-color', 'transparent');
                 $('.navbar').css('background', 'transparent');
                 $('.navbar').css('border-color', 'transparent');
