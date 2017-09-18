@@ -117,11 +117,15 @@ $(window).on("load",function(){
 	});    
   
 	//typed.js 
-	$(function(){
-		$("#typed").typed({
-			stringsElement: $('#typed-strings'),
-	        typeSpeed: 80      
-	      });	  
+	$(function() {
+	  $(".typedtext").typed({
+	    strings: [" Developer", " Designer", " Creative"],
+	    typeSpeed: 80,
+	    backSpeed: 10,
+	    backDelay: 2000,
+	    showCursor: false,
+	    loop: false
+	  });
 	});
 
 });

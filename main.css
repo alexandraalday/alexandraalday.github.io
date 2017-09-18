@@ -147,31 +147,29 @@ section {
     to   { opacity: 1; }
 }
 
-.typed-cursor{
-  font-size: auto;
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+.intro-text h1 {
+  font-size: 100px;
 }
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+.typed {
+  display: inline-block;
+  position: relative;
 }
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+.alex {
+  font-size: 50px;
 }
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+.me {
+  display: inline-block;
+  font-size: 50px;
 }
-#typed strong{
-    font-weight:800;
-    font-size: 54px;    
+
+.typedtext {
+  color: #12daff;
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 50px;
 }
 
 .arrow {
@@ -233,7 +231,7 @@ section {
 /* portfolio styles */
 
 #portfolio  h1 {
-  color: #ffffff;
+  color: #12daff;
 }
 
 #portfolio i {
