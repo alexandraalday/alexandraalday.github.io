@@ -24,12 +24,43 @@ $(window).on("load",function(){
     .addTo(scrollMagicController);
 
 
+    // PORTFOLIO STUFF
+    let portfolioTween = TweenMax.fromTo('#portfolio h1, #portfolio hr', 0.5,
+        {
+            y: -100
+        },
+        {
+            y: -30
+        }
+    );
+    let portfolioScene = new ScrollMagic.Scene({
+        triggerElement: '#portfolio',
+        duration: 700,
+        offset: 50
+    })
+    .setTween(portfolioTween)
+    .addTo(scrollMagicController);
+    let portfolioTextTween = TweenMax.fromTo('#portfolio-items', 0.5,
+        {
+            y: 0,
+        },
+        {
+            y: -25
+        }
+    );
+    let portfolioTextScene = new ScrollMagic.Scene({
+        triggerElement: '#portfolio',
+        duration: 500,
+        offset: 50
+    })
+    .setTween(portfolioTextTween)
+    .addTo(scrollMagicController);
 
 
 
 
 
-	// PORTFOLIO STUFF
+	// PORTFOLIO SLIDER
 	$(function() {
 
 

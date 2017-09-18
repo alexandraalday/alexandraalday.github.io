@@ -119,9 +119,6 @@ section {
   filter: brightness(80%);
 }
 
-
-
-
 .intro-text {
   padding: 100px 0;
   -webkit-animation: fadein 3s;
@@ -317,6 +314,7 @@ section {
     width: 100%; 
     max-width: 1920px; 
     position: relative; 
+    padding: 150px 0;
 }
 .portfolio-section h2{
   margin-bottom:5px;
@@ -334,7 +332,7 @@ section {
   -o-background-size: cover;
   -moz-background-size: cover;
   color: #fff;
-  padding: 5%;
+  padding: 100px 0;
 }
 
 #about-content {
