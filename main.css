@@ -316,7 +316,11 @@ section {
 }
 
 .portfolio-section{
-  background-color: #242526;
+  background: #181919;
+  background: -webkit-linear-gradient(left top, #181919, #333993); 
+  background: -o-linear-gradient(bottom right, #181919, #333993); 
+  background: -moz-linear-gradient(bottom right, #181919, #333993); 
+  background: linear-gradient(to bottom right, #181919, #333993); 
   margin: 0 auto; 
   width: 100%; 
   max-width: 1920px; 
@@ -343,7 +347,7 @@ section {
   -o-background-size: cover;
   -moz-background-size: cover;
   color: #fff;
-  padding: 100px 0;
+  padding: 150px 0;
 }
 
 #about-content {
