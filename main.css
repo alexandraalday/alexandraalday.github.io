@@ -110,7 +110,7 @@ section {
   z-index: -1;
   top: 0px;
   left: 0px;
-  background: url("https://i.imgur.com/pHzFKMn.jpg") center center fixed no-repeat;
+  background: url("assets/greensandbeach.jpg") center center fixed no-repeat;
   background-color: rgba(127, 76, 178, 0.6);
   background-blend-mode: multiply;
   background-size: cover;
@@ -340,7 +340,7 @@ section {
 
 #about-me {
   font-size: 1.5em;
-  background: url("https://i.imgur.com/bUDnXZg.jpg") center center fixed no-repeat;
+  background: url("assets/mtrainier.jpg") center center fixed no-repeat;
   background-color: rgba(127, 76, 178, 0.8);
   background-blend-mode: multiply;
   background-size: cover;
