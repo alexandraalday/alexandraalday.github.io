@@ -318,7 +318,7 @@ section {
   position: relative;
   padding: 25px 35px;
   text-align: center;
-  min-height: 105px;
+  height: 300px;
 }
 
 .card__body__wrapper {
@@ -359,9 +359,7 @@ section {
 .card__body__heading {
     font-weight: 400;
     color: #5f6368;
-    font-size: .95rem;
-    line-height: 25px;
-    padding: 15px 5px;
+    font-size: 2rem;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -383,7 +381,7 @@ section {
   width: 26px;
   height: 26px;
   background-color: #edf2f6;
-  color: #B2C0C8;
+  color: #12daff;
   line-height: 26px;
   text-align: center;
   font-size: 12px;
@@ -429,7 +427,7 @@ section {
 .card__footer__analysis--view {
   width: 26px;
   height: 26px;
-  color: #B2C0C8;
+  color: #6253e1;
   font-size: 11px;
   margin-left: 10px;
 }
@@ -457,22 +455,51 @@ section {
 }
 
 #about-me img {
-  border-radius: 50%;
-  width: 10em;
+  border-radius: 5%;
+  width: 13em;
   height: auto;
 }
 
 #resume {
   margin-top: 10%;
-  background-color: rgba(61, 61, 142, 0.4);
-  border-color: #D721C9;
   outline: 0;
   color: #12daff;
   transition: 300ms;
 }
 
+.btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    background-image: linear-gradient(to right, #6253e1, #852D91, #D721C9, #F24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
 #resume:hover {
-  background-color: rgba(61, 61, 142, 1);
   color: #ffffff;
 }
 
@@ -494,6 +521,7 @@ section {
 .social li {
   display: inline;
   margin: 10px;
+  line-height: 25px;
 }
 
 .social li a {

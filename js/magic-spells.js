@@ -79,10 +79,10 @@ $(window).on("load",function(){
 
     document.getElementById("list").innerHTML = listHtml;
 
-    let portfolioTextTween = TweenMax.staggerFromTo('#portfolio .portfolio-items', 0.5,
+    let portfolioTween = TweenMax.staggerFromTo('#portfolio .card__container', 0.5,
         {
             y: 50,
-            x: -50,
+            x: 100,
             opacity: 0
         },
         {
@@ -90,14 +90,14 @@ $(window).on("load",function(){
             x: 0,
             opacity: 1
         },
-        0.2
+        0.
     );
-    let portfolioTextScene = new ScrollMagic.Scene({
-        triggerElement: '#portfolio .portfolio-items',
+    let portfolioScene = new ScrollMagic.Scene({
+        triggerElement: '#portfolio .card__container',
         duration: 500,
-        offset: -200
+        offset: -100
     })
-    .setTween(portfolioTextTween)
+    .setTween(portfolioTween)
     .addTo(scrollMagicController);
 
     ////////////////////
