@@ -1,10 +1,109 @@
+var projectObject = {
+    0: {
+        "image":"assets/projects/flappyrick.png",
+        "heading":"Flappy Rick",
+        "body":"Rick and Morty take on flappy bird in this broswer based, canvas game. Utilized P5.js library for game animations and finite state machine for game phase staging. Consumes it's own API.",
+        "info":"HTML, CSS, Ruby, Rails, Express, AngularJS, JWT, P5",
+        "source":"https://github.com/alexandraalday/FlappyRick", 
+        "url":"https://flappyrick.herokuapp.com/"
+        },
+    1: {
+        "image":"assets/projects/goodgame.png",
+        "heading":"GoodGame",
+        "body":"Goodgame is an app that lets you catalog video games into user curated gamelists like 'currently playing', 'wishlist', and 'played'. A little like Goodreads or Spotify, but for video games.",
+        "info":"HTML, CSS, JavaScript, jQuery, MongoDB, Node, Express, AngularJS, JWT",
+        "source":"https://github.com/alexandraalday/goodgame", 
+        "url":"https://project-goodgame.herokuapp.com/"
+        },
+    2: {
+        "image":"assets/projects/laserz.png",
+        "heading":"Lasers vs. Bubbles",
+        "body":"Pew! Pew! It's a quick little canvas game, based on Asteroids.",
+        "info":"HTML, CSS, JavaScript, jQuery, P5",
+        "source":"https://github.com/alexandraalday/lasers-vs-bubbles", 
+        "url":"https://alexandraalday.github.io/lasers-vs-bubbles/"
+        },
+    3: {
+        "image":"assets/projects/modus.png",
+        "heading":"Modus",
+        "body":"Find songs to fit your mood. Enter the artist's name and title of a song. Modus will serve up 100 songs, consuming the Last.fm API, to make you feel the same. User authentication with JWT.",
+        "info":"HTML, CSS, Ruby, Rails, Express, AngularJS, JWT",
+        "source":"https://github.com/alexandraalday/modus_app_frontend", 
+        "url":"https://modus-app.herokuapp.com/"
+        },
+    4: {
+        "image":"assets/projects/girlgang.png",
+        "heading":"Girl Gang",
+        "body":"Girlgang is a single-page, sessions based, four model CRUD app build with MVC file organization. A place to collect and share media that celebrates and empowers all things femme.",
+        "info":"HTML, CSS, JavaScript, MongoDB, Node, Express, AngularJS, Session",
+        "source":"https://github.com/alexandraalday/girl-gang", 
+        "url":"http://girl-gang.herokuapp.com/"
+        },
+    5: {
+        "image":"assets/projects/simonuniverse.png",
+        "heading":"Simon Universe",
+        "body":"A game application based on the 80's classic, Simon, and inspired by the cartoon Steven Universe.",
+        "info":"HTML, CSS, JavaScript, jQuery",
+        "source":"https://github.com/alexandraalday/SimonUniverse", 
+        "url":"https://alexandraalday.github.io/SimonUniverse/"
+        },
+    6: {
+        "image":"assets/projects/pixelweather.jpg",
+        "heading":"Pixel Weather",
+        "body":"A weather app that uses geolocation and consumes the openweather API to display the current weather.",
+        "info":"HTML, CSS, Bootstrap, JavaScript, jQuery",
+        "source":"https://github.com/alexandraalday/pixel-weather", 
+        "url":"https://alexandraalday.github.io/pixel-weather/"
+        }
+    };
+
 $(window).on("load",function(){
+    const scrollMagicController = new ScrollMagic.Controller();
+
+    ////////////////////
+    // PORTFOLIO STUFF //
+    ////////////////////    
+
+    var template = document.getElementById("template-list-item");
+    var templateHtml = template.innerHTML;
+    var listHtml = "";
+
+    for (var key in projectObject) {
+      listHtml += templateHtml.replace(/{{image}}/g, projectObject[key]["image"])
+                              .replace(/{{heading}}/g, projectObject[key]["heading"])
+                              .replace(/{{body}}/g, projectObject[key]["body"])
+                              .replace(/{{info}}/g, projectObject[key]["info"])
+                              .replace(/{{source}}/g, projectObject[key]["source"])
+                              .replace(/{{url}}/g, projectObject[key]["url"]);
+    }
+
+    document.getElementById("list").innerHTML = listHtml;
+
+    let portfolioTween = TweenMax.staggerFromTo('#portfolio .card__container', 0.5,
+        {
+            y: 50,
+            x: 100,
+            opacity: 0
+        },
+        {
+            y: 0,
+            x: 0,
+            opacity: 1
+        },
+        0.
+    );
+    let portfolioScene = new ScrollMagic.Scene({
+        triggerElement: '#portfolio .card__container',
+        duration: 500,
+        offset: -100
+    })
+    .setTween(portfolioTween)
+    .addTo(scrollMagicController);
 
     ////////////////////
     // ABOUT ME STUFF //
     ////////////////////
 
-    let scrollMagicController = new ScrollMagic.Controller();
     let aboutmeTween = TweenMax.staggerFromTo('#about-me .item', 0.5,
         {
             y: 50,
@@ -25,124 +124,10 @@ $(window).on("load",function(){
     })
     .setTween(aboutmeTween)
     .addTo(scrollMagicController);
-
-    /////////////////////
-    // PORTFOLIO STUFF //
-    /////////////////////
-
-    let portfolioTween = TweenMax.fromTo('#portfolio h1, #portfolio hr', 0.5,
-        {
-            y: -100
-        },
-        {
-            y: -30
-        }
-    );
-    let portfolioScene = new ScrollMagic.Scene({
-        triggerElement: '#portfolio',
-        duration: 700,
-        offset: 50
-    })
-    .setTween(portfolioTween)
-    .addTo(scrollMagicController);
-    let portfolioTextTween = TweenMax.fromTo('#portfolio-items', 0.5,
-        {
-            y: 0,
-        },
-        {
-            y: -25
-        }
-    );
-    let portfolioTextScene = new ScrollMagic.Scene({
-        triggerElement: '#portfolio',
-        duration: 500,
-        offset: 50
-    })
-    .setTween(portfolioTextTween)
-    .addTo(scrollMagicController);
-
-
-    //////////////////////
-    // PORTFOLIO SLIDER //
-    //////////////////////
-
-	$(function() {
-
-
-	$('.slider-portfolio-pic').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        speed: 2000,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-portfolio-nav'
-	});
-
-
-	$('.slider-portfolio-content').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        speed: 2000,
-		asNavFor: '.slider-portfolio-pic',       
-        slide: 'div',
-		autoplay:true,
-		arrows: false
-	});
-
-
-	$('.slider-portfolio-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        speed: 2000,
-        asNavFor: '.slider-portfolio-content,.slider-portfolio-pic',
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true,
-        slide: 'div',
-		autoplay:true,
-      responsive: [
-	    {
-	      breakpoint: 768,
-	      settings: {
-	        arrows: true,
-	        centerMode: true,
-	        centerPadding: '40px',
-	        slidesToShow: 3
-	      }
-	    },
-	    {
-	      breakpoint: 480,
-	      settings: {
-	        arrows: true,
-	        centerMode: true,
-	        centerPadding: '40px',
-	        slidesToShow: 2
-	      }
-	    }]
-	});    
-  
-	//////////////////
-    // TYPED TEXT   //
-    //////////////////
-    
-	$(function() {
-	  $(".typedtext").typed({
-	    strings: [" Developer", " Designer", " Creative"],
-	    typeSpeed: 80,
-	    backSpeed: 10,
-	    backDelay: 2000,
-	    showCursor: false,
-	    loop: false
-	  });
-	});
-
-});
-
 });
 
 
 
-// Open the console...
 console.log("                             .");
 console.log("                           _,|\\ ");
 console.log("                           \\__/ ");
