@@ -2,7 +2,7 @@ $(() => {
 
     $(document).ready(function(){
         let rightmeow = $('#heading').offset().top  + $('#heading').height()
-        console.log(rightmeow);
+
         $(document).scroll(function () {
             if ( $(document).scrollTop() <= rightmeow ) {
                 $('.navbar').css('background-color', 'transparent');

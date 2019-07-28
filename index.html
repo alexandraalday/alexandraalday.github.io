@@ -37,9 +37,8 @@
   <!-- MAKING BOB ROSS PROUD -->
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic|Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
   <link rel="stylesheet" type="text/css" href="./main.css">
 </head>
 
@@ -104,7 +103,6 @@
         <h1><strong>Hello!</strong></h1>
         <hr class="separator">
         <h2 class="alex">I'm Alexandra.</h2>
-        <div class="typed"><h2 class="me">Web</h2><h2 class="typedtext">  </h2></div>
       </div>
 
       <div class="arrow arrow-1"></div>
@@ -114,174 +112,77 @@
   </header>
   <!-- end main heading -->
 
-  <!-- begin portfolio section -->
-  <section id="portfolio" name="portfolio" class="portfolio-section" data-type="background" data-speed="5">
-  <div class="container contents">
-    <div class="row text-center">
-      <h1>Portfolio</h1>
-      <hr class="separator">
-    </div>
-      <div id="portfolio-items" class="row">
-        <div class="col-sm-offset-1 col-sm-7 col-xs-12">          
-          <div class="slider slider-portfolio-pic">
-            <div class="slide-item">
-              <img src="assets/projects/flappyrick.png">
-            </div> 
-            <div class="slide-item">
-              <img src="assets/projects/modus.png">
-            </div> 
-            <div class="slide-item">
-              <img src="assets/projects/laserz.png">
-            </div>    
-            <div class="slide-item">      
-              <img src="assets/projects/goodgame.png">
-            </div>          
-            <div class="slide-item">      
-              <img src="assets/projects/girlgang.png">
-            </div>
-            <div class="slide-item">      
-              <img src="assets/projects/simonuniverse.png">
-            </div>
-            <div class="slide-item">      
-              <img src="assets/projects/pixelweather.jpg">
-            </div>
-            <div class="slide-item">      
-              <img src="assets/projects/hangman.jpg">
-            </div>
-            <div class="slide-item">      
-              <img src="assets/projects/ancientclapbacks.png">
-            </div>                  
-          </div>        
-        </div>  
-        <div class="col-sm-4 col-xs-12" id="portfolio-text-content">
-          <div class="border"></div>
-          <div class="slider slider-portfolio-content">
-            <div>      
-              <p><strong>Flappy Rick</strong></p>
-              <p>Rick and Morty take on flappy bird in this broswer based, canvas game. Utilized P5.js library for game animations and finite state machine for game phase staging. Consumes it's own API.</p>
-              <p><em>HTML, CSS, Ruby, Rails, Express, AngularJS, JWT, P5</em></p>
-              <a href="https://github.com/alexandraalday/FlappyRick" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-              <a href="https://flappyrick.herokuapp.com/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
-            </div> 
-            <div>      
-              <p><strong>Modus</strong></p>
-              <p>Find songs to fit your mood. Enter the artist's name and title of a song. Modus will serve up 100 songs, consuming the Last.fm API, to make you feel the same. User authentication with JWT.</p>
-              <p><em>HTML, CSS, Ruby, Rails, Express, AngularJS, JWT</em></p>
-              <a href="https://github.com/alexandraalday/modus_app_frontend" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-              <a href="https://modus-app.herokuapp.com/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
-            </div> 
-            <div>
-              <p><strong>Lasers vs. Bubbles</strong></p>
-              <p>Pew! Pew! It's a quick little canvas game, based on Asteroids.</p>
-              <p><em>HTML, CSS, JavaScript, jQuery, P5</em></P>
-              <a href="https://github.com/alexandraalday/lasers-vs-bubbles" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-              <a href="https://alexandraalday.github.io/lasers-vs-bubbles/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
-            </div>  
-            <div>      
-              <p><strong>Good Game</strong></p>
-              <p>Goodgame is an app that lets you catalog video games into user curated gamelists like "currently playing", "wishlist", and "played". A little like Goodreads or Spotify, but for video games.</p>
-              <p><em>HTML, CSS, JavaScript, jQuery, MongoDB, Node, Express, AngularJS, JWT</em></p>
-              <a href="https://github.com/alexandraalday/goodgame" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-              <a href="https://project-goodgame.herokuapp.com/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
-            </div>            
-            <div>      
-              <p><strong>Girl Gang</strong></p>
-              <p>Girlgang is a single-page, sessions based, four model CRUD app build with MVC file organization. A place to collect and share media that celebrates and empowers all things femme. </p>
-              <p><em>HTML, CSS, JavaScript, MongoDB, Node, Express, AngularJS, Session</em></p>
-              <a href="https://github.com/alexandraalday/girl-gang" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-              <a href="http://girl-gang.herokuapp.com/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
-            </div>
-            <div>      
-              <p><strong>Simon Universe</strong></p>
-              <p>A game application based on the 80's classic, Simon, and inspired by the cartoon Steven Universe. </p>
-              <p><em>HTML, CSS, JavaScript, jQuery</em></p>
-              <a href="https://github.com/alexandraalday/SimonUniverse" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-              <a href="https://alexandraalday.github.io/SimonUniverse/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
-            </div>
-            <div>      
-              <p><strong>Pixel Weather</strong></p>
-              <p>A weather app that uses geolocation and consumes the openweather API to display the current weather.</p>
-              <p><em>HTML, CSS, Bootstrap, JavaScript, jQuery</em></p>
-              <a href="https://github.com/alexandraalday/pixel-weather" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-              <a href="https://alexandraalday.github.io/pixel-weather/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
-            </div>
-            <div>
-              <p><strong>Hangman</strong></p> 
-              <p>A quick hangman game.</p>           
-              <p><em>HTML, CSS, JavaScript, jQuery</em></p>
-              <a href="https://github.com/alexandraalday/hangman" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-              <a href="https://alexandraalday.github.io/hangman/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>            
-            </div>
-            <div>      
-              <p><strong>Ancient Clapbacks</strong></p>
-              <p>A random generator of sassy, ancient quotes. Quotes can then be tweeted!</p>
-              <p><em>HTML, CSS, JavaScript, jQuery</em></p>
-              <a href="https://github.com/alexandraalday/ancient-clapbacks" target='_blank'><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-              <a href="https://alexandraalday.github.io/ancient-clapbacks/" target='_blank'><i class="fa fa-window-maximize" aria-hidden="true"></i></a>
-            </div>         
-          </div>
-          <div class="border"></div>        
-        </div>        
-        <div class="col-sm-offset-1 col-sm-10 hidden-xs">                             
-          <div class="slider slider-portfolio-nav">
-            <div class="slide-item">
-              <img src="assets/projects/flappyrick.png">
-            </div> 
-            <div class="slide-item">
-              <img src="assets/projects/modus.png">
-            </div> 
-            <div class="slide-item">
-              <img src="assets/projects/laserz.png">
-            </div>
-            <div class="slide-item">
-              <img src="assets/projects/goodgame.png">
-            </div>            
-              <div class="slide-item">      
-              <img src="assets/projects/girlgang.png">
-            </div>
-            <div class="slide-item">      
-              <img src="assets/projects/simonuniverse.png">
-            </div>
-            <div class="slide-item">      
-              <img src="assets/projects/pixelweather.jpg">
-            </div>
-            <div class="slide-item">      
-              <img src="assets/projects/hangman.jpg">
-            </div>
-            <div class="slide-item">      
-              <img src="assets/projects/ancientclapbacks.png">
-            </div>           
-          </div>
-        </div>     
-        <div class="col-sm-1"></div>
-      </div>
-    </div>
-  </section> 
-  <!-- end portfolio section -->
-
-  <!-- begin about-me section -->
+<!-- begin about-me section -->
   <section id="about-me">
-    <div class="container">
-      <div class="row text-center">
+    <div class="container contents">
+      <div class="row col-md-offset-6">
         <h1 class="item">I'm Alexandra</h1>
         <hr class="separator item">
       </div>
-      <div class="row " id="about-content">
-        <div class="col-md-6 col-md-offset-2">
-          <p class="item"> As a classics major turned program manager, I combine my passions for creativity, ingenuity, and teamwork to solve complex problems and make them accessible to others. As a developer, I create interesting and new things that help people think, create, and do more.</p>
-          <a href="https://drive.google.com/file/d/16cmExlaiTWOZuCcF4b2gSE38ngz7L_9Y/view?usp=sharing" target="_blank"><button class="btn btn-default item" id="resume">Download Résumé</button></a>
-        </div>
-        <div class="col-md-4">
+      <div class="row" id="about-content">
+        <div class="col-md-4  col-md-offset-2">
          <img class="item" src="https://i.imgur.com/Ci16vB3.png">
         </div>
+        <div class="col-md-6">
+          <p class="item"> As a classics major turned program manager, I combine my passions for creativity, ingenuity, and teamwork to solve complex problems and make them accessible to others. As a developer, I create interesting and new things that help people think, create, and do more.</p>
+          <a href="https://drive.google.com/file/d/16cmExlaiTWOZuCcF4b2gSE38ngz7L_9Y/view?usp=sharing" target="_blank"><button class="btn btn-default item" id="resume">Download Résumé</button></a>
+        </div> 
       </div>
     </div>
   </section>
   <!-- end about-me section -->
 
+  <!-- begin portfolio section -->
+  <section id="portfolio" name="portfolio" class="portfolio-section" data-type="background" data-speed="5">
+  <div class="container">
+    <div class="row text-center">
+      <h1 class="portfolio-title">Portfolio</h1>
+      <hr class="separator">
+    </div>
+      <div id="portfolio-container">
+          <div id="list" class="portfolio-items"></div>
+
+          <script id="template-list-item" type="text/template">
+            <div class="card__container">
+              
+              <div class="card__image">
+                <img src="{{image}}" alt="">
+              </div>
+                        
+              <div class="card__body">
+                <div class="card__body__wrapper">
+                  <span class="card__body__wrapper--source"/>
+                </div>
+                <h3 class="card__body__heading">{{heading}}</h3>
+                <div>      
+                  <p>{{body}}</p>
+                  <p><em>{{info}}</em></p>
+                </div>           
+              </div>
+              
+              <div class="card__footer">
+                <div class="card__footer__options">
+                  <a href="{{source}" target='_blank'>
+                    <span class="card__footer__options--source"/>
+                  </a>
+                </div>
+                <div class="card__footer__analysis">
+                  <a href="{{url}}" target='_blank'>
+                    <span class="card__footer__analysis--view"/>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </script>
+                
+      </div>
+    </div>
+  </section> 
+  <!-- end portfolio section -->
+
   <!-- begin contact section -->
   <section id="contact">
-    <div class="container">
+    <div class="container contents">
       <h1 class='text-center'>Say hello!</h1>
       <hr class="separator">
       <ul class="social text-center">
@@ -306,11 +207,9 @@
   <!-- GANDALF WAS HERE -->
   <script src="https://use.fontawesome.com/7a7760a42a.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script data-cfasync="false" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
   <script data-cfasync="false" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+  <script src="https://cdnjs.﻿cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>﻿
   <script data-cfasync="false" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
   <script data-cfasync="false" src="./js/magic-spells.js"></script>
   <script type="text/javascript" src="./main.js"></script>
 </body>
