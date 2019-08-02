@@ -135,7 +135,7 @@
   <section id="portfolio" name="portfolio" class="portfolio-section" data-type="background" data-speed="5">
   <div class="container">
     <div class="row text-center">
-      <h1 class="portfolio-title">Portfolio</h1>
+      <h1 class="portfolio-title">Some Things I Made</h1>
       <hr class="separator">
     </div>
       <div id="portfolio-container">
@@ -170,7 +170,9 @@
               </div>
             </div>
           </script>
-                
+         <div class="row text-center">
+            <h1 class="portfolio-tada">🎉</h1>
+         </div>  
       </div>
     </div>
   </section> 
@@ -179,23 +181,32 @@
   <!-- begin contact section -->
   <section id="contact">
     <div class="container contents">
-      <h1 class='text-center'>Say hello!</h1>
-      <hr class="separator">
-      <ul class="social text-center">
-        <li>
-          <a id="github" href="https://github.com/alexandraalday" target="_blank"><i class="fa fa-github"></i></a>
-        </li>
-        <li>
-          <a id="linked-in" href='https://www.linkedin.com/in/alexandraalday' target="_blank"><i class="fa fa-linkedin"></i></a>
-        </li>
-        <li>
-          <a id="twitter" href='https://www.twitter.com/hellionoftroyxx' target="_blank"><i class="fa fa-twitter"></i></a>
-        </li>
-        <li>
-          <a id="email" href='mailto:alexandra.alday@gmail.com'><i class="fa fa-envelope"></i></a>
-        </li>
-      </ul>
-    </div>
+      <h1 class='text-center'>Let's chat!</h1>
+      <div class="link-container">
+        <hr id="contact-separator" class="separator">
+        <div class="social github float">
+          <a class="link" href="https://github.com/alexandraalday" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
+        <div class="social linked-in float">
+          <a class="link" href='https://www.linkedin.com/in/alexandraalday' target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>         
+        <div class="social twitter float">
+          <a class="link" href='https://www.twitter.com/hellionoftroyxx' target="_blank"><i class="fa fa-twitter"></i></a>
+        </div>
+        <div class="social email float">
+          <a class="link" href='mailto:alexandra.alday@gmail.com'><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+    </div>  
   </section>
   <!-- end contact section -->
   <hr id="bottom-line" class="separator">

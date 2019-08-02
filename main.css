@@ -14,7 +14,6 @@ h4,
 h5,
 h6 {
   font-family: 'Roboto', sans-serif;
-  text-transform: uppercase;
 }
 
 section {
@@ -32,6 +31,7 @@ section {
 
 .container.contents h1 {
   color: #fff;
+  font-size: 60px;
 }
 
 .special {
@@ -137,6 +137,10 @@ section {
       animation: fadein 3s;
 }
 
+.intro-text h1 {
+    text-transform: uppercase;
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -228,6 +232,7 @@ section {
 
 #portfolio {
   background: #f6f9fc;
+  padding: 150px 0;
 }
 
 #portfolio i {
@@ -236,6 +241,13 @@ section {
 
 .portfolio-title {
   color: #12daff;
+  font-size: 60px;
+}
+
+.portfolio-tada {
+  color: #12daff;
+  font-size: 60px;
+  padding-top: 100px;
 }
 
 .portfolio-items {
@@ -287,7 +299,7 @@ section {
 }
 
 .card__container {
-  width: 300px;
+  height: 475px;
   background: #fff;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
@@ -316,9 +328,9 @@ section {
 
 .card__body {
   position: relative;
-  padding: 25px 35px;
+  padding: 10px 35px;
   text-align: center;
-  height: 300px;
+  height: 275px;
 }
 
 .card__body__wrapper {
@@ -368,6 +380,16 @@ section {
   justify-content: space-between;
   border-top: 1px solid #ddd;
   padding: 10px 15px;
+}
+
+.portfolio-items :nth-child(1n) > .card__footer {
+  background: linear-gradient(45deg, #e91e63, #ffeb3b);
+}
+.portfolio-items :nth-child(2n) > .card__footer {
+  background: linear-gradient(45deg, #3503ad, #f7308c);
+}
+.portfolio-items :nth-child(3n) > .card__footer {
+  background: linear-gradient(45deg, #ccff00, #09afff);
 }
 
 .card__footer__options {
@@ -447,17 +469,21 @@ section {
   font-size: 1.5em;
   background: linear-gradient(45deg, #ccff00, #09afff);
   color: #fff;
-  padding: 150px 0;
+  padding: 150px 0 250px 0px;
 }
 
 #about-content {
-  margin-top: 5%;
+  margin-top: 8%;
 }
 
 #about-me img {
   border-radius: 5%;
   width: 13em;
   height: auto;
+}
+
+#about-me p {
+  font-size: 1.25em;
 }
 
 #resume {
@@ -511,55 +537,82 @@ section {
 #contact {
   background: linear-gradient(45deg, #e91e63, #ffeb3b);
   color: #ffffff;
+  padding: 150px 0 100px 0;
+}
+
+.link-container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  filter:url('#goo');
+}
+
+.link-container > .separator {
+  z-index: 99;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  margin: -10px 0 15px 0;
 }
 
 .social {
-  list-style: none;
-  padding: 0px;
-}
-
-.social li {
-  display: inline;
-  margin: 10px;
-  line-height: 25px;
-}
-
-.social li a {
-  display: inline-block;
-  color: #ffffff;
-  width: 50px;
-  height: 50px;
-}
-
-.social li a:hover {
-  color: #D721C9;
-}
-
-#github, #linked-in, #twitter, #email {
-  border-radius: 50%;
+  position: relative;
+  margin: 10px 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
   border: solid 2px rgba(61, 61, 142, 0.86);
-  font-size: 1.5em;
+  display: inline-block;
+  color: #FFF;
+  text-align: center;
+  line-height: 32px;
+  vertical-align: middle;
+  font-size: 24px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 13px 27px -5px rgba(50,50,93,.25),0 8px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,.025);
+  box-shadow: 0 13px 27px -5px rgba(50,50,93,.25),0 8px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,.025);
+}
+
+.github, .linked-in, .twitter, .email {
+  opacity: 0;
+  font-size: 2em;
   padding: 10px;
+  color: #ffffff;
 }
 
-#github:hover {
+.fa-github, .fa-linkedin, .fa-twitter, .fa-envelope {
+  color: #ffffff;
+}
+
+.clicked {
+  opacity: 1;
+  transition: 1.2s all ease;
+  transform: translateY(70px);
+}
+
+.clicked:hover {
+  transition: .5s all ease;
+  transform: translateY(56px);
+  -webkit-box-shadow: 0 30px 60px -12px rgba(50,50,93,.25),0 18px 36px -18px rgba(0,0,0,.3),0 -12px 36px -8px rgba(0,0,0,.025);
+  box-shadow: 0 30px 60px -12px rgba(50,50,93,.25),0 18px 36px -18px rgba(0,0,0,.3),0 -12px 36px -8px rgba(0,0,0,.025);
+}
+
+.github {
   background-color: #333;
-  color: #ffffff;
 }
 
-#linked-in:hover {
+.linked-in {
   background: #007bb6;
-  color: #ffffff;
 }
 
-#twitter:hover {
+.twitter {
   background: #55acee;
-  color: #ffffff;
 }
 
-#email:hover {
+.email {
   background: #db4b39;
-  color: #ffffff;
 }
 
 #bottom-line {

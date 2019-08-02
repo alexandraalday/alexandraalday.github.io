@@ -79,10 +79,10 @@ $(window).on("load",function(){
 
     document.getElementById("list").innerHTML = listHtml;
 
-    let portfolioTween = TweenMax.staggerFromTo('#portfolio .card__container', 0.5,
+    let portfolioHeaderTween = TweenMax.staggerFromTo('#portfolio h1, #portfolio hr', 0.5,
         {
-            y: 50,
-            x: 100,
+            y: 100,
+            x: 0,
             opacity: 0
         },
         {
@@ -90,12 +90,33 @@ $(window).on("load",function(){
             x: 0,
             opacity: 1
         },
-        0.
+        0.2
+    );
+    let portfolioHeaderScene = new ScrollMagic.Scene({
+        triggerElement: '#portfolio',
+        duration: 500,
+        offset: -100
+    })
+    .setTween(portfolioHeaderTween)
+    .addTo(scrollMagicController);
+
+    let portfolioTween = TweenMax.staggerFromTo('#portfolio .card__container', 0.5,
+        {
+            y: 100,
+            x: 0,
+            opacity: 0
+        },
+        {
+            y: 0,
+            x: 0,
+            opacity: 1
+        },
+        0.2
     );
     let portfolioScene = new ScrollMagic.Scene({
         triggerElement: '#portfolio .card__container',
-        duration: 500,
-        offset: -100
+        duration: 800,
+        offset: -200
     })
     .setTween(portfolioTween)
     .addTo(scrollMagicController);
@@ -106,8 +127,8 @@ $(window).on("load",function(){
 
     let aboutmeTween = TweenMax.staggerFromTo('#about-me .item', 0.5,
         {
-            y: 50,
-            x: -50,
+            y: 100,
+            x: 0,
             opacity: 0
         },
         {
@@ -124,6 +145,27 @@ $(window).on("load",function(){
     })
     .setTween(aboutmeTween)
     .addTo(scrollMagicController);
+
+    ////////////////////
+    // SOCIAL STUFF //
+    ////////////////////
+
+    let socialScene = new ScrollMagic.Scene({
+        triggerElement: '#contact-separator',
+        duration: 700,
+        offset: -200
+    })
+    .on('enter', function(e) {
+        $(".social.github").addClass("clicked");
+        $(".social.linked-in").addClass("clicked");
+        $(".social.twitter").addClass("clicked");
+        $(".social.email").addClass("clicked");
+    })
+    .addTo(scrollMagicController);
+
+
+
+
 });
 
 
