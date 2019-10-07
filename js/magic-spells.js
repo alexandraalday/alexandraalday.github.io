@@ -1,4 +1,4 @@
-var projectObject = {
+const portfolioProjects = {
     0: {
         "image":"assets/projects/flappyrick.png",
         "heading":"Flappy Rick",
@@ -57,29 +57,52 @@ var projectObject = {
         }
     };
 
-$(window).on("load",function(){
-    const scrollMagicController = new ScrollMagic.Controller();
-
-    ////////////////////
-    // PORTFOLIO STUFF //
-    ////////////////////    
-
-    var template = document.getElementById("template-list-item");
-    var templateHtml = template.innerHTML;
-    var listHtml = "";
-
-    for (var key in projectObject) {
-      listHtml += templateHtml.replace(/{{image}}/g, projectObject[key]["image"])
-                              .replace(/{{heading}}/g, projectObject[key]["heading"])
-                              .replace(/{{body}}/g, projectObject[key]["body"])
-                              .replace(/{{info}}/g, projectObject[key]["info"])
-                              .replace(/{{source}}/g, projectObject[key]["source"])
-                              .replace(/{{url}}/g, projectObject[key]["url"]);
+const isMobileDevice = $(window).width() > 960;
+const helloMax = 400;
+const helloMin = 200;
+const helloRate = 0.6;
+  
+$(document).ready(() => {
+    if (isMobileDevice) {
+        let initialMass = helloMax-helloRate*$(document).scrollTop() + 'px';
+        $('.intro-text h1').css({'font-size': initialMass, 'line-height': initialMass});        
     }
+});    
 
+$(window).scroll(() => {
+    if (isMobileDevice) {
+        let mass = Math.max(helloMin, helloMax-helloRate*$(document).scrollTop()) + 'px';
+        $('.intro-text h1').css({'font-size': mass, 'line-height': mass});
+    }
+});          
+
+$(window).on("load",() => {
+    let template = document.getElementById("template-list-item");
+    let templateHtml = template.innerHTML;
+    let listHtml = "";
+
+    for (let key in portfolioProjects) {
+        listHtml += templateHtml.replace(/{{image}}/g, portfolioProjects[key]["image"])
+                                .replace(/{{heading}}/g, portfolioProjects[key]["heading"])
+                                .replace(/{{body}}/g, portfolioProjects[key]["body"])
+                                .replace(/{{info}}/g, portfolioProjects[key]["info"])
+                                .replace(/{{source}}/g, portfolioProjects[key]["source"])
+                                .replace(/{{url}}/g, portfolioProjects[key]["url"]);
+    }
     document.getElementById("list").innerHTML = listHtml;
 
-    let portfolioHeaderTween = TweenMax.staggerFromTo('#portfolio h1, #portfolio hr', 0.5,
+    const scrollMagicController = new ScrollMagic.Controller();
+
+    if (isMobileDevice) {    
+        const jumboTronScene = new ScrollMagic.Scene({
+            triggerElement: '#heading',
+            duration: 300
+        })
+        .setPin("#typed-strings")
+        .addTo(scrollMagicController);
+    };
+
+    const portfolioHeaderTween = TweenMax.staggerFromTo('#portfolio h1, #portfolio hr', 0.5,
         {
             y: 100,
             x: 0,
@@ -92,15 +115,14 @@ $(window).on("load",function(){
         },
         0.2
     );
-    let portfolioHeaderScene = new ScrollMagic.Scene({
+    const portfolioHeaderScene = new ScrollMagic.Scene({
         triggerElement: '#portfolio',
         duration: 500,
         offset: -100
     })
     .setTween(portfolioHeaderTween)
     .addTo(scrollMagicController);
-
-    let portfolioTween = TweenMax.staggerFromTo('#portfolio .card__container', 0.5,
+    const portfolioTween = TweenMax.staggerFromTo('#portfolio .card__container', 0.5,
         {
             y: 100,
             x: 0,
@@ -113,7 +135,7 @@ $(window).on("load",function(){
         },
         0.2
     );
-    let portfolioScene = new ScrollMagic.Scene({
+    const portfolioScene = new ScrollMagic.Scene({
         triggerElement: '#portfolio .card__container',
         duration: 800,
         offset: -200
@@ -121,11 +143,7 @@ $(window).on("load",function(){
     .setTween(portfolioTween)
     .addTo(scrollMagicController);
 
-    ////////////////////
-    // ABOUT ME STUFF //
-    ////////////////////
-
-    let aboutmeTween = TweenMax.staggerFromTo('#about-me .item', 0.5,
+    const aboutmeTween = TweenMax.staggerFromTo('#about-me .item', 0.5,
         {
             y: 100,
             x: 0,
@@ -138,7 +156,7 @@ $(window).on("load",function(){
         },
         0.2
     );
-    let aboutmeScene = new ScrollMagic.Scene({
+    const aboutmeScene = new ScrollMagic.Scene({
         triggerElement: '#about-me .item',
         duration: 500,
         offset: -200
@@ -146,11 +164,7 @@ $(window).on("load",function(){
     .setTween(aboutmeTween)
     .addTo(scrollMagicController);
 
-    ////////////////////
-    // SOCIAL STUFF //
-    ////////////////////
-
-    let socialScene = new ScrollMagic.Scene({
+    const socialScene = new ScrollMagic.Scene({
         triggerElement: '#contact-separator',
         duration: 700,
         offset: -200
@@ -163,12 +177,7 @@ $(window).on("load",function(){
     })
     .addTo(scrollMagicController);
 
-
-
-
-});
-
-
+});    
 
 console.log("                             .");
 console.log("                           _,|\\ ");
