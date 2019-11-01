@@ -1,20 +1,20 @@
 $(() => {
-
     $(document).ready(function(){
-        let rightmeow = $('#heading').offset().top  + $('#heading').height()
+        const rightmeow = $('#heading').offset().top  + $('#heading').height()
+        const backgroundColorScrollTop = 'transparent';
+        const backgroundColor = 'rgba(61, 61, 142, 0.86)';
 
         $(document).scroll(function () {
             if ( $(document).scrollTop() <= rightmeow ) {
-                $('.navbar').css('background-color', 'transparent');
-                $('.navbar').css('background', 'transparent');
-                $('.navbar').css('border-color', 'transparent');
+                $('.navbar').css('background-color', backgroundColorScrollTop);
+                $('.navbar').css('background', backgroundColorScrollTop);
+                $('.navbar').css('border-color', backgroundColorScrollTop);
             } else {
-                $('.navbar').css('background-color', 'rgba(61, 61, 142, 0.86)');
+                $('.navbar').css('background-color', backgroundColor);
                 $('.navbar').css('filter', 'brightness(80%)'); 
             }
         })
     });
-
 });
 
 

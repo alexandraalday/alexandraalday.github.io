@@ -64,20 +64,20 @@ const helloRate = 0.6;
   
 $(document).ready(() => {
     if (isMobileDevice) {
-        let initialMass = helloMax-helloRate*$(document).scrollTop() + 'px';
+        const initialMass = helloMax-helloRate*$(document).scrollTop() + 'px';
         $('.intro-text h1').css({'font-size': initialMass, 'line-height': initialMass});        
     }
 });    
 
 $(window).scroll(() => {
     if (isMobileDevice) {
-        let mass = Math.max(helloMin, helloMax-helloRate*$(document).scrollTop()) + 'px';
+        const mass = Math.max(helloMin, helloMax-helloRate*$(document).scrollTop()) + 'px';
         $('.intro-text h1').css({'font-size': mass, 'line-height': mass});
     }
 });          
 
 $(window).on("load",() => {
-    let template = document.getElementById("template-list-item");
+    const template = document.getElementById("template-list-item");
     let templateHtml = template.innerHTML;
     let listHtml = "";
 
