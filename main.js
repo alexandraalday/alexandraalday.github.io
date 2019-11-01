@@ -1,6 +1,6 @@
 $(() => {
     $(document).ready(function(){
-        const rightmeow = $('#heading').offset().top  + $('#heading').height()
+        const rightmeow = $('#heading').offset().top  + $('#heading').height() * 1.5;
         const backgroundColorScrollTop = 'transparent';
         const backgroundColor = 'rgba(61, 61, 142, 0.86)';
 
