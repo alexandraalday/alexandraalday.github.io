@@ -69,11 +69,11 @@ section {
   display: none;
 }
 
-#bootstrap-override a {
+#navigation a {
   color: #12daff;
 }
 
-#bootstrap-override a:hover {
+#navigation a:hover {
   color: #ffffff;
 }
 
